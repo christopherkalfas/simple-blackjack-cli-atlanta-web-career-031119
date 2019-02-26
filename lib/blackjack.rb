@@ -52,9 +52,9 @@ end
 def runner
   welcome
   initial_round
-  card_total = deal_card + deal_card
   hit?(card_total)
   display_card_total(card_total)
+  card_total = deal_card + deal_card
   case card_total
     when card_total <= 21
       hit?(card_total)
