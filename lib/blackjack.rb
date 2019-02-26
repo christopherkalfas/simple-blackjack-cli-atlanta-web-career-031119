@@ -52,6 +52,7 @@ end
 def runner
   welcome
   initial_round
+  card_total = deal_card + deal_card
   hit?(card_total)
  display_card_total(card_total)
   case card_total
