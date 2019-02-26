@@ -6,13 +6,14 @@ def deal_card
    rand(1..11)
 end
 
+def prompt_user
+  puts "Type 'h' to hit or 's' to stay"
+end
+
 def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
 end
 
-def prompt_user
-  puts "Type 'h' to hit or 's' to stay"
-end
 
 def get_user_input
   gets.chomp 
@@ -22,7 +23,7 @@ def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
-def initial_round
+def initial_round(deal_card, display_card_total)
   card_total = deal_card + deal_card
   print display_card_total(card_total)
   card_total 
@@ -56,7 +57,7 @@ def runner
   deal_card = 0 
   while display_card_total(card_total) <= 21
     hit?(card_total)
-    deal_card +=
+    deal_card += 1 
   end
   end_game
 end 
