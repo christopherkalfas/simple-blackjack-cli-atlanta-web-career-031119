@@ -55,11 +55,12 @@ def runner
   card_total = deal_card + deal_card
   hit?(card_total)
   display_card_total(card_total)
+  hit?(card_total)
   case card_total
     when card_total <= 21
       hit?(card_total)
       deal_card
-      
+      display_card_total(card_total)
     when card_total >= 21
       end_game(card_total)
   end
